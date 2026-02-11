@@ -1,0 +1,35 @@
+<div class="details-container" *ngIf="suggestion">
+  <div class="container">
+    <div class="details-card">
+      <div class="card-header">
+        <h2>{{ suggestion.title }}</h2>
+        <span class="badge" [ngClass]="getStatusClass(suggestion.status)">
+          {{ getStatusText(suggestion.status) }}
+        </span>
+      </div>
+
+      <div class="card-body">
+        <p class="description">{{ suggestion.description }}</p>
+        
+        <div class="card-meta">
+          <span class="category">📁 {{ suggestion.category }}</span>
+          <span class="date">📅 {{ suggestion.date | date:'dd/MM/yyyy' }}</span>
+          <span class="likes">❤️ {{ suggestion.nbLikes }} like(s)</span>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <button class="btn btn-back" (click)="backToList()">
+          ← Retour à la liste
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="not-found" *ngIf="!suggestion">
+  <p>❌ Suggestion non trouvée</p>
+  <button class="btn btn-back" (click)="backToList()">
+    ← Retour à la liste
+  </button>
+</div>
