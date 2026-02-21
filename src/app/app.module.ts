@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { routes } from './app.routes';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +14,8 @@ import { routes } from './app.routes';
     BrowserModule,
     RouterModule.forRoot(routes),
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

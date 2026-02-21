@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { Suggestion } from '../../../models/suggestion';
 
 @Component({
   selector: 'app-suggestion-list',
+  standalone: true,
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './suggestion-list.component.html',
   styleUrl: './suggestion-list.component.css'
 })

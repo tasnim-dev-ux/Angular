@@ -1,0 +1,230 @@
+.list-container {
+  min-height: calc(100vh - 200px);
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-section h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 20px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.favorites-count {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.suggestion-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.suggestion-card.favorite-card {
+  border: 3px solid #ffd700;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+  flex: 1;
+  padding-right: 10px;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge.en-attente {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge.acceptee {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge.refusee {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.card-body {
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.category, .date {
+  font-size: 13px;
+  color: #666;
+}
+
+.likes-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.likes-count {
+  font-size: 14px;
+  color: #e91e63;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 100px;
+}
+
+.btn-like {
+  background: #e91e63;
+  color: white;
+}
+
+.btn-like:hover {
+  background: #c2185b;
+}
+
+.btn-favorite {
+  background: #ffd700;
+  color: #333;
+}
+
+.btn-favorite:hover:not(:disabled) {
+  background: #ffb700;
+}
+
+.btn-favorite:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.btn-details {
+  background: #667eea;
+  color: white;
+}
+
+.btn-details:hover {
+  background: #5568d3;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.refused-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.no-results p {
+  font-size: 18px;
+}
